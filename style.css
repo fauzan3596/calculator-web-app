@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(75, 88, 107);
+    background: linear-gradient(315deg, rgba(75, 88, 107, 1) 0%, rgba(9, 9, 10, 1) 100%);
+}
+
+/* ----------------------
+Layout kalkulator 
+------------------------- */
+.calculator {
+    width: 370px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5%;
+    box-shadow: -5px 10px 15px gray;
+}
+
+/* ----------------------
+Layout display screen kalkulator
+------------------------- */
+#display {
+    width: 300px;
+    padding: 5px 8px;
+    margin: 10px;
+    color: white;
+    font-size: 35px;
+    border: 1px solid gray;
+    box-shadow: 3px -3px 15px gray;
+    text-align: right;
+    background: transparent;
+}
+
+input::placeholder {
+    color: white;
+}
+
+/* ----------------------
+Button Kalkulator 
+------------------------- */
+.calculator-button {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, .3);
+    cursor: pointer;
+}
+
+#equal {
+    flex-grow: 2;
+    border-radius: 30px;
+    background-color: #eb7224;
+}
+
+#all-clear {
+    background-color: #247aeb;
+}
+
+.operators {
+    color: rgb(208, 255, 0);
+    font-size: 25px;
+}

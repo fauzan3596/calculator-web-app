@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="calculator">
+            <input type="text" placeholder="0" value="0" id="display" disabled>
+            <div class="calculator-button">
+                <!-- First Button Column -->
+                <div class="col">
+                    <button type="button" class="operators" id="plus" value="+">&plus;</button>
+                    <button type="button" id="seven" value="7">7</button>
+                    <button type="button" id="four" value="4">4</button>
+                    <button type="button" id="one" value="1">1</button>
+                    <button type="button" id="all-clear">AC</button>
+                </div>
+                <!-- Second Button Column -->
+                <div class="col">
+                    <button type="button" class="operators" id="minus" value="-">&minus;</button>
+                    <button type="button" id="eight" value="8">8</button>
+                    <button type="button" id="five" value="5">5</button>
+                    <button type="button" id="two" value="2">2</button>
+                    <button type="button" id="zero" value="0">0</button>
+                </div>
+                <!-- Third Button Column -->
+                <div class="col">
+                    <button type="button" class="operators" id="times" value="*">&times;</button>
+                    <button type="button" id="nine" value="9">9</button>
+                    <button type="button" id="six" value="6">6</button>
+                    <button type="button" id="three" value="3">3</button>
+                    <button type="button" id="decimal" value=".">.</button>
+                </div>
+                <!-- Foruth Button Column -->
+                <div class="col">
+                    <button type="button" class="operators" id="divide" value="/">&divide;</button>
+                    <button type="button" id="equal" value="=">=</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </main>
+</body>
+
+</html>
