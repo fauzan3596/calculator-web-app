@@ -25,12 +25,12 @@ let isCalculated = false; /* variabel untuk menentukan apakah display akan diref
 let isDecimal = false; // variabel untuk membuat . hanya dapat diketik sekali di setiap angkanya
 
 // function untuk menampilkan angka ketika button angka ditekan 
-function pressNumber(value) {
-    if (display.value == 0 || isCalculated == true) {
-        display.value = value;
+function pressNumber(number) {
+    if (display.value === '0' || isCalculated == true) {
+        display.value = number;
         isCalculated = false;
     } else {
-        display.value = display.value + value;
+        display.value = display.value + number;
     }
 }
 
@@ -75,7 +75,7 @@ btn9.addEventListener("click", function () {
 })
 
 // function untuk menjalankan operasi perhitungan ketika button operator ditekan 
-function pressOperator(value) {
+function pressOperator(operator) {
     let lastChar = display.value[display.value.length - 1];
     switch (lastChar) {
         case "+":
@@ -87,7 +87,7 @@ function pressOperator(value) {
         case "/":
             break;
         default:
-            display.value = display.value + value;
+            display.value = display.value + operator;
             break;
     }
     isCalculated = false; /* tidak merefresh display ketika ingin melanjutkan perhitungan setelah selesai
@@ -113,17 +113,21 @@ btnDiv.addEventListener("click", function () {
 
 // membuat bilangan decimal hanya dapat ditekan sekali 
 btnDec.addEventListener("click", function () {
-    if (!display.value.includes(".")) {
-        display.value = display.value + btnDec.value
+    if (isCalculated) {
+        display.value = "0.";
+        isCalculated = false;
         isDecimal = true;
-    } else if (isDecimal == false) {
-        display.value = display.value + btnDec.value
+    }
+    else if (!isDecimal) {
+        display.value += ".";
         isDecimal = true;
     }
 })
 
 btnAC.addEventListener("click", function () {
     display.value = 0;
+    isCalculated = false;
+    isDecimal = false;
 })
 
 btnEqu.addEventListener("click", function () {
